@@ -25,14 +25,14 @@ userInput.addEventListener('keypress', function(e) {
         if (mensaje.toLowerCase() === "--help" || mensaje.toLowerCase() === "help") {
             ejecutarAyudaLocal();
         } else {
-            displayArea.innerHTML += `<p class="system-msg">>>> Procesando en nodo Inter_Aguadilla...</p>`;
+            displayArea.innerHTML += `<p class="system-msg">>>> Procesando...</p>`;
         }
         displayArea.scrollTop = displayArea.scrollHeight;
     }
 });
 
 function ejecutarAyudaLocal() {
-    const mensajeIA = "¡Diantre macho! Aquí tienes los ejemplos que el sistema reconoce:";
+    const mensajeIA = "Diantre, no sabes? Aquí estan los ejemplos!";
     const ejemplos = Object.keys(datosAyuda); // Extrae las frases de arriba
 
     const iaLine = document.createElement('p');
