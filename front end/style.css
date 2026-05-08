@@ -1,6 +1,9 @@
 body {
-    background-color: #0a0a0a;
-    color: #00ff41; /* Verde Matrix clásico */
+    background-color: #1e1e1e;
+    background-image: #2a2a2a 1px, transparent 1px;
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    color: #00ff41;
     font-family: 'Courier New', monospace;
     display: flex;
     flex-direction: column;
@@ -25,15 +28,17 @@ body {
 }
 
 #terminal {
-    background-color: rgba(0, 20, 0, 0.9);
+    background-color: rgba(30, 30, 30, 0.95);
     border: 2px solid #00ff41;
-    width: 80%;
-    max-width: 900px;
-    height: 400px;
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+    width: 90%;
+    max-width: 1000px;
+    height: 500px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
     display: flex;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
 }
 
 #display-area {
@@ -44,8 +49,11 @@ body {
 
 .input-container {
     display: flex;
+    align-items: center;
     border-top: 1px solid #003300;
-    padding-top: 10px;
+    padding-top: 15px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 input {
@@ -54,9 +62,46 @@ input {
     color: #fff;
     outline: none;
     flex-grow: 1;
+    min-width: 0;
     font-family: inherit;
     font-size: 1.1rem;
     margin-left: 10px;
+}
+
+/* --- Estilos para la interacción del Script --- */
+
+.user-msg { 
+    color: #ffffff; 
+    margin-top: 10px; 
+}
+
+.ia-msg-matrix { 
+    color: #ffd700; /* Color Oro para el veterano */
+    font-weight: bold; 
+    margin-top: 15px; 
+    text-shadow: 0 0 5px #ffd700; 
+}
+
+.flashcard-tecnica { 
+    border-left: 3px solid #00bfff; 
+    padding-left: 15px; 
+    margin-top: 10px; 
+    color: #00bfff; /* Azul profesional */
+    background: rgba(0, 191, 255, 0.05); 
+}
+
+.cmd-blue { 
+    color: #ffffff; 
+    background: #00bfff; 
+    padding: 0 4px; 
+    font-weight: bold; 
+    margin-right: 5px; 
+}
+
+.system-msg { 
+    color: #00ff41; 
+    opacity: 0.5; 
+    font-size: 0.8rem; 
 }
 
 .prompt { color: #00ff41; font-weight: bold; }
